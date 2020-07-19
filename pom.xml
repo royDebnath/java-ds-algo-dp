@@ -1,0 +1,18 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.java.tutorial</groupId>
+  <artifactId>java-tutorial</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>java-tutorial-parent</name>
+  <description>Java Tutorial</description>
+  <modules>
+  	<module>basic-programs</module>
+  	<module>datastructure-algorithms</module>
+  	<module>design-patterns</module>
+  	<module>system-design</module>
+  	<module>z-practice</module>
+  	<module>poc-projects</module>
+  	<module>theory-java</module>
+  </modules>
+</project>
