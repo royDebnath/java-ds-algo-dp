@@ -39,13 +39,16 @@ public class Immutability {
 		private final double radius;
 
 		public ImmutableCircle(Point center, double radius) {
+			//deep copy constructor
 			// we create new object here because it shouldn't be changed
 			this.center = new Point(center.getX(), center.getY());
 			this.radius = radius;
 		}
 
 		public Point getCenter() {
-			return center;
+			// return a copy of the object to avoid
+			// the value of center changed from code outside the class
+			return new Point(center.getX(), center.getY());
 		}
 
 		public double getRadius() {
@@ -57,7 +60,7 @@ public class Immutability {
 	/*
 	 * The standard recipe for an immutable class is as follows: 
 	 * 
-	 * All propertiesmust be set in the constructor(s) or factory method(s). 
+	 * All properties must be set in the constructor(s) or factory method(s).
 	 * There should be no setters. If it is necessary to include setters for 
 	 * interface compatibility reasons, they should either do nothing or throw an
 	 * exception. 
