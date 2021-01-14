@@ -11,8 +11,8 @@
   	<module>datastructure-algorithms</module>
   	<module>design-patterns</module>
   	<module>system-design</module>
-  	<module>z-practice</module>
   	<module>poc-projects</module>
   	<module>theory-java</module>
+      <module>leetcode</module>
   </modules>
 </project>

@@ -1,12 +1,12 @@
-package com.parctice;
+package com.theory.basics.multithreading;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-public class BlockingQueueExample {
+public class BlockingQueueImplementation {
 
 	public static void main(String[] args) {
-		BlockingQueue<Integer> queue = new ArrayBlockingQueue<Integer>(10);
+		BlockingQueue<Integer> queue = new ArrayBlockingQueue<>(10);
 		
 		Thread t1 = new Thread(() -> {
 			int count = 0;
@@ -30,6 +30,7 @@ public class BlockingQueueExample {
 					System.out.println("Consumed : " + queue.take());
 				}
 			} catch (InterruptedException e) {
+				System.out.println("In catch block. Interrupted ");
 			}
 
 		});

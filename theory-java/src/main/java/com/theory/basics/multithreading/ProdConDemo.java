@@ -1,4 +1,4 @@
-package com.parctice;
+package com.theory.basics.multithreading;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +7,8 @@ public class ProdConDemo {
 
 	public static void main(String[] args) {
 		List<Integer> taskQueue = new ArrayList<>();
-		Producer producer = new Producer(taskQueue, 10);
-		Consumer consumer = new Consumer(taskQueue);
+		ProducerImpl producer = new ProducerImpl(taskQueue, 10);
+		ConsumerImpl consumer = new ConsumerImpl(taskQueue);
 
 		Thread t1 = new Thread(producer);
 		Thread t2 = new Thread(consumer);
@@ -19,12 +19,12 @@ public class ProdConDemo {
 
 }
 
-class Producer implements Runnable {
+class ProducerImpl implements Runnable {
 
-	List<Integer> taskQueue;
-	int MAX_SIZE = 10;
+	private List<Integer> taskQueue;
+	private int MAX_SIZE = 10;
 
-	public Producer(List<Integer> taskQueue, int mAX_SIZE) {
+	public ProducerImpl(List<Integer> taskQueue, int mAX_SIZE) {
 		this.taskQueue = taskQueue;
 		MAX_SIZE = mAX_SIZE;
 	}
@@ -59,11 +59,11 @@ class Producer implements Runnable {
 
 }
 
-class Consumer implements Runnable {
+class ConsumerImpl implements Runnable {
 
 	List<Integer> taskQueue;
 
-	public Consumer(List<Integer> taskQueue) {
+	public ConsumerImpl(List<Integer> taskQueue) {
 		this.taskQueue = taskQueue;
 	}
 

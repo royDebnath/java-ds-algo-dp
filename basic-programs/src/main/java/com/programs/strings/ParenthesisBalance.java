@@ -1,10 +1,8 @@
-package com.parctice;
+package com.programs.strings;
 
 import java.util.Stack;
 
 public class ParenthesisBalance {
-
-	static boolean isBalanced = false;
 
 	public static void main(String[] args) {
 		String s = "[{()()}]";
@@ -12,7 +10,7 @@ public class ParenthesisBalance {
 	}
 
 	private static boolean checkBalanced(String s) {
-		Stack<Character> stack = new Stack<Character>();
+		Stack<Character> stack = new Stack<>();
 		Character normalOpen = '(';
 		Character normalClose = ')';
 		Character curlyOpen = '{';
@@ -30,14 +28,10 @@ public class ParenthesisBalance {
 				return false;
 			}
 		}
-		if (stack.isEmpty()) {
-			return true;
-		} else {
-			return false;
-		}
+		return stack.isEmpty();
 	}
 
-	static boolean isMatchingPair(char character1, char character2) {
+	private static boolean isMatchingPair(char character1, char character2) {
 		if (character1 == '(' && character2 == ')')
 			return true;
 		else if (character1 == '{' && character2 == '}')

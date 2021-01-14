@@ -1,4 +1,4 @@
-package com.parctice;
+package com.theory.basics.multithreading;
 
 import java.util.List;
 import java.util.stream.Collectors;
